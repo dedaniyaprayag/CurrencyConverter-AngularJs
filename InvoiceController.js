@@ -1,5 +1,6 @@
 var app =  angular.module('currencyConvert',[])
-	app.controller('InvoiceController',['currencyConverterService',function InvoiceController(currencyConverterService) {
+
+app.controller('InvoiceController',['currencyConverterService',function InvoiceController(currencyConverterService) {
 	self=this;
 	self.qty =1;
 	self.cost = 2;
@@ -13,7 +14,8 @@ var app =  angular.module('currencyConvert',[])
 		window.alert("success");
 	};
 	}]);
-	app.factory('currencyConverterService',function currencyConverter() {
+
+app.factory('currencyConverterService',function currencyConverter() {
 		var currency = ['USD','EUR','CNY'];
 		var foreignRates = {
 		USD : 1,
@@ -23,9 +25,11 @@ var app =  angular.module('currencyConvert',[])
 		var convert = function(amount, inCurr, outCurr) {
       		return amount * foreignRates[outCurr] / foreignRates[inCurr];
     	};
+     
 
     return {
  		currencies: currency,
         convert: convert
     };
 });
+hgfhgfhgfhgf
